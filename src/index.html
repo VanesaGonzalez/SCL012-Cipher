@@ -3,12 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <link href="https://fonts.googleapis.com/css?family=Prociono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
-    </div>
+    <header>
+      <h1>Cifrado César</h1>
+      <h3>Cifra y Descifra tus mensajes</h3>
+  </header>
+  <div class="container">
+      <form action="">
+          <section>
+              <p>Ingrese su mensaje: </p>
+              <input type="text" name="inputMessage" id="inputMessage" />
+          </section>
+          <section>
+              <span id="">Número de desplazamiento: </span>
+              <input type="number" name="" min="1" max="" id="number" required="required" />
+          </section>
+          <section class="buttons">
+              <button id="botonCifrar" type="button" onclick="cipherEncode()">Cifrar</button>
+              <button id="botonDescifrar" type="button" onclick="cipherDecode()">Descifrar</button>
+          </section>
+          <section>
+              <div id="outputMessage"></div>
+          </section>
+          <section>
+              <button id="botonLimpiar" type="reset" onclick="clean()">Limpiar</button>
+          </section>
+      </form>
+  </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
