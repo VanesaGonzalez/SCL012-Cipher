@@ -1,82 +1,234 @@
+/*---------------------header-----------------------------*/
+
 header{
-    display: grid;
+    display: flex;
     justify-content: center;
-    border: 2px solid #62A8AC ;;
-    width: 70%;
+    border: 3px solid #3d3c3c ;;
+    width: 90%;
     margin: auto;
-    background: rgb(242,248,248);
-    background: radial-gradient(circle, rgba(242,248,248,1) 0%, rgba(255,255,255,1) 0%, rgba(98,168,172,1) 100%, rgba(255,255,255,1) 100%);
+    background-image: url(../img/maxresdefault.jpg);
+    box-shadow: 5px 5px 5px #7d7d7d;
     font-family:  'Yatra One', cursive;
     color: #333333;
 }
 header h1{
     font-size:50px;
     margin:auto;
+    padding-left: 100px;
 }
 header h3{
     margin:auto;
+    padding-left: 36px;
 }
+
+/*-------------------Container----------------------------*/
+
 .container{
     display: grid;
     font-family: 'Prociono', serif;
     color: #333333;
-    width: 70%;
+    width: 90%;
     margin: auto;
 }
 section {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
+#message{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+/*----------------------inputMessage--------------------------*/
+
 .container #inputMessage{
-    border: 1px solid;
-    width:100%;
-    height:70px;
+    border: 2px solid #ccc;
+    width: 30%;
+    height: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    padding: 30px;
 }
+.container #inputMessage:focus{
+    outline:none;
+}
+
+/*----------------------outputMessage--------------------------*/
+
+.container #outputMessage{
+    border: 2px solid #ccc;
+    width: 30%;
+    height: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 30px;
+}
+.container #outputMessage:focus{
+    outline:none;
+}
+
+/*---------------------------number-------------------------------*/
+
 .container #number{
-    width: 50px;
+    width: 45px;
+    height: 40px;
+    margin-top: 50px;
+    border: 2px solid #ccc;
+    font-size: 20px;
 }
-.container .buttons{
+.container #number:focus{
+    outline:none;
+}
+
+/*------------------------tooltip(help)---------------------------*/
+.container #flex{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+#tooltip img{
+    position: relative;
+    width: 20px;
+    margin-top:65px;
+}
+#tooltip span{
+    background: #f7f5f5 ; 
+    border: 2px solid #62A8AC;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #7d7d7d;
+    color: #393939;
+    display: none; 
+    font-family: sans-serif;
+    font-size: 0.8em;
+    padding: 10px;
+    width: 200px;
+    position: absolute;
+}
+#tooltip:hover span {
+    display: inline; 
+}
+
+/*-------------------------images------------------------------*/
+
+#images{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+/*--------------------------buttons-----------------------------*/
+
+.container #buttons{
     display:flex;
     width:100%;
     justify-content:space-around;
     transition-duration: 0.4s;
 }
+
+/*----------------------------botonCifrar--------------------------*/
+
 .container #botonCifrar{
     border: 2px solid #62A8AC; 
     border-radius: 12px;
     font-size: 16px;
     width:150px;
 }
+.container #botonCifrar:focus{
+    outline:none;
+}
 .container #botonCifrar:hover{
     background-color: #62A8AC;
     color: white;
     border-radius: 12px;
 }
+
+/*----------------------botonDescifrar--------------------------*/
+
 .container #botonDescifrar{
     border: 2px solid #62A8AC;
     border-radius: 12px;
     font-size: 16px;
     width:150px;
 }
+.container #botonDescifrar:focus{
+    outline:none;
+}
 .container #botonDescifrar:hover{
     background-color: #62A8AC; 
     color: white;
     border-radius: 12px;
 }
-.container #outputMessage{
-    border: 1px solid;
-    width:100%;
-    height:70px;
-}
-.container #botonLimpiar{
+
+/*----------------------logos clean/copy--------------------------*/
+.container #logos{
     display:flex;
-    width:100%;
-    justify-content:space-around;
+    justify-content: center;
+    margin-top: -77px;
+}
+.container #logos .space{
+    padding-right: 20px;;
+}
+
+/*----------------------botónLimpiar--------------------------*/
+
+.container #botonLimpiar{
     border: 2px solid #62A8AC; 
-    border-radius: 12px;
-    font-size: 16px;
+    background-image:url(../img/borrar.png);
+    background-repeat:no-repeat;
+    height:50px;
+    width:50px;
+    background-position:center;
 }
-.container #botonLimpiar:hover{
-    background-color: #62A8AC; 
-    color: white;
-    border-radius: 12px;
+.container #botonLimpiar:focus{
+    outline: none;
 }
+.container #botonLimpiar span{
+    background: #f7f5f5 ; 
+    border: 2px solid #62A8AC;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #7d7d7d;
+    color: #393939;
+    display: none; 
+    font-family: sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    width: 100px;
+    position: absolute;
+}
+#botonLimpiar:hover span {
+    display: inline; 
+}
+
+/*----------------------botónCopiar--------------------------*/
+
+.container #botonCopiar{
+    border: 2px solid #62A8AC; 
+    background-image:url(../img/copiar.png);
+    background-repeat:no-repeat;
+    height:50px;
+    width:50px;
+    background-position:center;
+}
+.container #botonCopiar:focus{
+    outline: none;
+}
+.container #botonCopiar span{
+    background: #f7f5f5 ; 
+    border: 2px solid #62A8AC;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #7d7d7d;
+    color: #393939;
+    display: none; 
+    font-family: sans-serif;
+    font-size: 1em;
+    padding: 10px;
+    width: 100px;
+    position: absolute;
+}
+#botonCopiar:hover span {
+    display: inline; 
+}
+

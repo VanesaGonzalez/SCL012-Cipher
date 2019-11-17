@@ -9,28 +9,50 @@
   </head>
   <body>
     <header>
-      <h1>Cifrado César</h1>
-      <h3>Cifra y Descifra tus mensajes</h3>
+      <div id="title">
+          <h1>Rot-X</h1>
+          <h3>Cifra y Descifra tus mensajes</h3>
+      </div>
   </header>
   <div class="container">
       <form action="">
           <section>
-              <p>Ingrese su mensaje: </p>
-              <input type="text" name="inputMessage" id="inputMessage" />
+              <div id="message">
+                  <textarea name="inputMessage" id="inputMessage" ></textarea>
+                  <div id="flex">
+                      <input value="3" type="number" name="" min="" max="" id="number" required="required" />
+                      <div id="tooltip">
+                          <img src="../img/help.png" alt="">
+                          <span><strong>Número de desplazamiento:</strong>Es la cantidad de posiciones
+                          por las que no moveremos (o desplazaremos) dentro del alfabeto para sustituir
+                          la letra del texto original por otra que se encuentra en la ubicación seleccionada.
+                          Por ejemplo, si selecciono el 3, la letra A pasa a ser D.</span>
+                      </div>
+                  </div>
+                  <div id="outputMessage"></div>
+              </div>
           </section>
-          <section>
-              <span id="">Número de desplazamiento: </span>
-              <input type="number" name="" min="1" max="" id="number" required="required" />
-          </section>
-          <section class="buttons">
+          <section id="buttons">
               <button id="botonCifrar" type="button" onclick="cipherEncode()">Cifrar</button>
               <button id="botonDescifrar" type="button" onclick="cipherDecode()">Descifrar</button>
           </section>
           <section>
-              <div id="outputMessage"></div>
+              <div id="images">
+                  <img src="../img/girl.jpeg" alt="">
+                  <img src="../img/boy.jpeg" alt="">
+              </div>
           </section>
-          <section>
-              <button id="botonLimpiar" type="reset" onclick="clean()">Limpiar</button>
+          <section id="logos">
+              <div class="space">
+                  <button id="botonLimpiar" type="reset" onclick="clean()">
+                      <span>Borrar todo</span>
+                  </button>
+              </div>
+              <div class="space">
+                  <button id="botonCopiar">
+                      <span>Copiar</span>
+                  </button>
+              </div>
           </section>
       </form>
   </div>
